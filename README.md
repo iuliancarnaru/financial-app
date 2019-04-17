@@ -1,6 +1,7 @@
 # This is my first project
 
-This project started as a personal financial projection over time
+This project started as a personal need for a financial projection over time
+Is combining a regular expense-income app, plus some goodies
 
 ## App v1.0
 

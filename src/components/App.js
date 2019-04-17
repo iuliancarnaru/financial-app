@@ -1,16 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "normalize.css";
+import Dashboard from "./Dashboard";
 
-const App = props => {
+const App = () => {
   return (
     <div>
-      <h1>{props.title}</h1>
+      <Dashboard />
     </div>
   );
-};
-
-App.defaultProps = {
-  title: "CRUD with Hooks"
 };
 
 App.propTypes = {
