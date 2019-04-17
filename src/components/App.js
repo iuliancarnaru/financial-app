@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "normalize.css";
 import Dashboard from "./Dashboard";
 
 const App = () => {
   const dashboardData = {
-    income: 2200,
-    outcome: 1954,
-    percentage: 88
+    income: 0,
+    outcome: 0,
+    percentage: 0
+  };
+
+  const [data, setData] = useState(dashboardData);
+
+  const printMessage = () => {
+    setData({
+      income: 2000,
+      outcome: 1560,
+      percentage: 88
+    });
   };
 
   return (
     <div>
-      <Dashboard dashboardData={dashboardData} />
+      <Dashboard data={data} printMessage={printMessage} />
     </div>
   );
 };

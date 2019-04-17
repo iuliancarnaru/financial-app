@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Dashboard = props => {
-  const { income, outcome, percentage } = props.dashboardData;
+  const { income, outcome, percentage } = props.data;
+
   return (
     <header>
       <div className="main-title">
@@ -20,6 +21,9 @@ const Dashboard = props => {
           {/* color percentage 0-35 green / 36-70 yellow / >= 71 red */}
           <div className="precentage">{percentage}%</div>
         </div>
+        <button type="button" onClick={props.printMessage}>
+          Click
+        </button>
       </div>
     </header>
   );
