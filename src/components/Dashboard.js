@@ -12,18 +12,15 @@ const Dashboard = props => {
       <div className="">
         <div className="flex-container income">
           <div>Income</div>
-          <div>+{income}</div>
+          <div>+ {income}</div>
           <div className="precentage">&nbsp;</div>
         </div>
         <div className="flex-container outcome">
           <div>Outcome</div>
-          <div>-{outcome}</div>
+          <div>- {outcome}</div>
           {/* color percentage 0-35 green / 36-70 yellow / >= 71 red */}
           <div className="precentage">{percentage}%</div>
         </div>
-        <button type="button" onClick={props.printMessage}>
-          Click
-        </button>
       </div>
     </header>
   );
@@ -31,9 +28,9 @@ const Dashboard = props => {
 
 Dashboard.propTypes = {
   dashboardData: PropTypes.shape({
-    income: PropTypes.number,
-    outcome: PropTypes.number,
-    percentage: PropTypes.number
+    income: PropTypes.string,
+    outcome: PropTypes.string,
+    percentage: PropTypes.string
   })
 };
 
