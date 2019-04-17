@@ -1,18 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "normalize.css";
 import Dashboard from "./Dashboard";
 
 const App = () => {
+  const dashboardData = {
+    income: 2200,
+    outcome: 1954,
+    percentage: 88
+  };
+
   return (
     <div>
-      <Dashboard />
+      <Dashboard dashboardData={dashboardData} />
     </div>
   );
-};
-
-App.propTypes = {
-  title: PropTypes.string
 };
 
 export default App;

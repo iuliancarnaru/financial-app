@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Dashboard = () => {
+const Dashboard = props => {
+  const { income, outcome, percentage } = props.dashboardData;
   return (
     <header>
       <div className="main-title">
@@ -9,18 +11,26 @@ const Dashboard = () => {
       <div className="">
         <div className="flex-container income">
           <div>Income</div>
-          <div>+ 2,200.00</div>
+          <div>+{income}</div>
           <div className="precentage">&nbsp;</div>
         </div>
         <div className="flex-container outcome">
           <div>Outcome</div>
-          <div>- 1,954.00</div>
+          <div>-{outcome}</div>
           {/* color percentage 0-35 green / 36-70 yellow / >= 71 red */}
-          <div className="precentage">88%</div>
+          <div className="precentage">{percentage}%</div>
         </div>
       </div>
     </header>
   );
+};
+
+Dashboard.propTypes = {
+  dashboardData: PropTypes.shape({
+    income: PropTypes.number,
+    outcome: PropTypes.number,
+    percentage: PropTypes.number
+  })
 };
 
 export default Dashboard;
