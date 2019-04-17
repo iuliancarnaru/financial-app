@@ -13,7 +13,10 @@ const App = () => {
   const [data, setData] = useState(dashboardData);
 
   const addDataToDashboard = inputData => {
-    setData({ ...data, ...inputData });
+    inputData.percentage = Math.floor(
+      (inputData.outcome / inputData.income) * 100
+    );
+    setData({ data, ...inputData });
   };
 
   return (

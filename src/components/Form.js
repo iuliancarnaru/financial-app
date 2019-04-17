@@ -16,8 +16,7 @@ const Form = props => {
 
   const handleFromSubmit = event => {
     event.preventDefault();
-    if (!inputData.income || !inputData.outcome || !inputData.percentage)
-      return;
+    if (!inputData.income || !inputData.outcome) return;
 
     props.addDataToDashboard(inputData);
     setInputData(initialState);
@@ -41,15 +40,6 @@ const Form = props => {
           id="outcome"
           name="outcome"
           value={inputData.outcome}
-          onChange={handleInputChange}
-        />
-        <br />
-        <label htmlFor="percentage">Add percentage</label>
-        <input
-          type="number"
-          id="percentage"
-          name="percentage"
-          value={inputData.percentage}
           onChange={handleInputChange}
         />
         <br />
