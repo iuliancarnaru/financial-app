@@ -1,30 +1,20 @@
-import React, { useState } from "react";
-import "normalize.css";
-import Dashboard from "./Dashboard";
-import Form from "./Form";
+import React from "react";
+import PropTypes from "prop-types";
 
-const App = () => {
-  const dashboardData = {
-    income: "0",
-    outcome: "0",
-    percentage: "0"
-  };
-
-  const [data, setData] = useState(dashboardData);
-
-  const addDataToDashboard = inputData => {
-    inputData.percentage = Math.floor(
-      (inputData.outcome / inputData.income) * 100
-    );
-    setData({ data, ...inputData });
-  };
-
+const App = props => {
   return (
     <div>
-      <Dashboard data={data} />
-      <Form addDataToDashboard={addDataToDashboard} />
+      <h1>{props.title}</h1>
     </div>
   );
+};
+
+App.propTypes = {
+  title: PropTypes.string
+};
+
+App.defaultProps = {
+  title: "Financial independence"
 };
 
 export default App;
