@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> component should render succesfuly 1`] = `
+<div>
+  <Dashboard />
+</div>
+`;

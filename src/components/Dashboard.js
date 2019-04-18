@@ -1,16 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 
 const Dashboard = props => {
   return (
-    <div>
-      <h1>{props.title}</h1>
-    </div>
+    <header>
+      <h1>%Message%</h1>
+    </header>
   );
 };
 
-Dashboard.propTypes = {
-  title: PropTypes.string.isRequired
-};
+Dashboard.propTypes = {};
 
 export default Dashboard;
