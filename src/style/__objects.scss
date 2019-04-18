@@ -1,10 +1,11 @@
 .dashboard-container {
-  background-color: $color-primary--light-grey;
+  // background-color: $color-primary--light-grey;
   padding: 2rem;
 }
 
 .heading-primary {
   font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 
 .heading-secondary {
@@ -31,4 +32,12 @@
 .percentage {
   font-size: 1.2rem;
   color: white;
+}
+
+.dashboard-card {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: $color-primary--light-grey;
+  padding: 0.5rem;
 }
