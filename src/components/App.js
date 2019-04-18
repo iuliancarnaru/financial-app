@@ -1,20 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
+import Dashboard from "./Dashboard";
 
-const App = props => {
+const App = () => {
   return (
     <div>
-      <h1>{props.title}</h1>
+      <Dashboard title="Financial independence" />
     </div>
   );
-};
-
-App.propTypes = {
-  title: PropTypes.string
-};
-
-App.defaultProps = {
-  title: "Financial independence"
 };
 
 export default App;
