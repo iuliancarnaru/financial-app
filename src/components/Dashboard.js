@@ -3,8 +3,10 @@ import React from "react";
 
 const Dashboard = props => {
   return (
-    <header>
-      <h1>%Message%</h1>
+    <header className="dashboard-container">
+      <h1 className="heading-primary">Your stats for April</h1>
+      <h2 className="heading-secondary">Income:</h2>
+      <h2 className="heading-secondary">Outcome:</h2>
     </header>
   );
 };
