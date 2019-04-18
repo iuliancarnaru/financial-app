@@ -1,3 +1,7 @@
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+}
 .dashboard-container {
   // background-color: $color-primary--light-grey;
   padding: 2rem;
@@ -15,18 +19,18 @@
 .income,
 .outcome {
   padding: 0.5rem;
-  background-color: greenyellow;
+  background-color: $app-color--light-blue;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 0.5rem;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .outcome {
-  background-color: red;
+  background-color: $app-color--medium-grey;
 }
 
 .percentage {
@@ -38,6 +42,33 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  background-color: $color-primary--light-grey;
-  padding: 0.5rem;
+  background-color: $app-color--light-grey;
+  padding: 0.3rem;
+
+  .icon {
+    font-size: 2.8rem;
+  }
+
+  .info-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    margin-top: 0.1rem;
+
+    &--bad {
+      background-color: #ff0000;
+    }
+    &--medium {
+      background-color: #f1a300;
+    }
+    &--good {
+      background-color: #b0ff00;
+    }
+  }
+
+  .info-display {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-left: 0.5rem;
+  }
 }
