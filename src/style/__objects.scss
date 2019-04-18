@@ -5,10 +5,30 @@
 
 .heading-primary {
   font-weight: 300;
-  color: orangered;
 }
 
 .heading-secondary {
   font-weight: 100;
-  font-size: 2rem;
+}
+
+.income,
+.outcome {
+  padding: 0.5rem;
+  background-color: greenyellow;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.outcome {
+  background-color: red;
+}
+
+.percentage {
+  font-size: 1.2rem;
+  color: white;
 }
