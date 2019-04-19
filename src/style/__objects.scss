@@ -1,7 +1,13 @@
+.main-container {
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
 .dashboard-main {
   display: flex;
   flex-direction: column;
 }
+
 .dashboard-container {
   // background-color: $color-primary--light-grey;
   padding: 2rem;
@@ -59,9 +65,11 @@
     &--bad {
       background-color: #ff0000;
     }
+
     &--medium {
       background-color: #f1a300;
     }
+
     &--good {
       background-color: #b0ff00;
     }
