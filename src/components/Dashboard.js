@@ -8,7 +8,7 @@ const Dashboard = props => {
         <section className="dashboard-container">
           <h1 className="heading-primary">
             <i class="icon ion-md-calendar margin-right-s" />
-            April
+            Total April %amount%
           </h1>
           <h2 className="heading-secondary income">
             Income: <span className="amount">3400</span>
