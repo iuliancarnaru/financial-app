@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "./context";
 //import PropTypes from "prop-types";
 
 const Dashboard = props => {
+  const { state } = useContext(AppContext);
+
   return (
     <React.Fragment>
       <div className="dashboard-main">
         <section className="dashboard-container">
           <h1 className="heading-primary">
             <i className="icon ion-md-calendar margin-right-s" />
-            Total April %amount%
+            {`Total ${state.info[0].month}`}
+            <p>{`£${state.info[0].total}`}</p>
           </h1>
           <h2 className="heading-secondary income">
             Income: <span className="amount">3400</span>
