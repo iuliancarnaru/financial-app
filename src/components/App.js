@@ -6,6 +6,7 @@ import { Router } from "@reach/router";
 
 import Dashboard from "./Dashboard";
 import Edit from "./Edit";
+import NotFound from "./NotFound";
 
 const App = () => {
   const initialState = useContext(AppContext);
@@ -17,6 +18,7 @@ const App = () => {
         <Router>
           <Dashboard path="/" />
           <Edit path="/edit" />
+          <NotFound default />
         </Router>
       </div>
     </AppContext.Provider>
