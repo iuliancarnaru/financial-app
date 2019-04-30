@@ -7,7 +7,7 @@ const Dashboard = props => {
       <div className="dashboard-main">
         <section className="dashboard-container">
           <h1 className="heading-primary">
-            <i class="icon ion-md-calendar margin-right-s" />
+            <i className="icon ion-md-calendar margin-right-s" />
             Total April %amount%
           </h1>
           <h2 className="heading-secondary income">
@@ -22,7 +22,7 @@ const Dashboard = props => {
 
         <section className="dashboard-card">
           <div className="dashboard-card--home">
-            <i class="icon ion-md-home icon-color" />
+            <i className="icon ion-md-home icon-color" />
             <div className="flex-wrapper">
               <div className="info-dot info-dot--bad">&nbsp;</div>
               <p className="info-display">1650</p>
@@ -30,7 +30,7 @@ const Dashboard = props => {
           </div>
 
           <div className="dashboard-card--home">
-            <i class="icon ion-md-pizza icon-color" />
+            <i className="icon ion-md-pizza icon-color" />
             <div className="flex-wrapper">
               <div className="info-dot info-dot--medium">&nbsp;</div>
               <p className="info-display">400</p>
@@ -38,7 +38,7 @@ const Dashboard = props => {
           </div>
 
           <div className="dashboard-card--home">
-            <i class="icon ion-md-bus icon-color" />
+            <i className="icon ion-md-bus icon-color" />
             <div className="flex-wrapper">
               <div className="info-dot info-dot--good">&nbsp;</div>
               <p className="info-display">120</p>
