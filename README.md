@@ -45,3 +45,22 @@ You can contact me at: iulian.carnaru@yahoo.co.uk
         </li>
       ))}
     </ul>
+
+Probably the most common reason to use navigate is a form submission. Perhaps the user submits a form, you save some data, and then navigate to the record
+
+    import {
+      Router,
+      Link,
+      navigate
+    } from "@reach/router"
+
+      <form
+      onSubmit={event => {
+        event.preventDefault()
+        const id = event.target.elements[0].value
+        event.target.reset()
+
+        // pretend like we saved a record to the DB here
+        // and then we navigate imperatively
+        navigate(`/invoices/${id}`)
+      }}
