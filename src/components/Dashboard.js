@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import AppContext from "./context";
+import { Link } from "@reach/router";
 //import PropTypes from "prop-types";
 
-const Dashboard = props => {
+const Dashboard = () => {
   const { state } = useContext(AppContext);
 
   return (
@@ -49,6 +50,9 @@ const Dashboard = props => {
             </div>
           </div>
         </section>
+        <div>
+          <Link to="/edit">Edit expenses</Link>
+        </div>
       </div>
     </React.Fragment>
   );

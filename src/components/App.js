@@ -2,7 +2,10 @@ import React, { useContext, useReducer } from "react";
 import AppContext from "./context";
 import AppReducer from "./reducer";
 
+import { Router } from "@reach/router";
+
 import Dashboard from "./Dashboard";
+import Edit from "./Edit";
 
 const App = () => {
   const initialState = useContext(AppContext);
@@ -11,7 +14,10 @@ const App = () => {
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className="main-container">
-        <Dashboard />
+        <Router>
+          <Dashboard path="/" />
+          <Edit path="/edit" />
+        </Router>
       </div>
     </AppContext.Provider>
   );
