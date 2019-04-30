@@ -17,7 +17,9 @@ const App = () => {
       <div className="main-container">
         <Router>
           <Dashboard path="/" />
+
           <Edit path="/edit" />
+
           <NotFound default />
         </Router>
       </div>
