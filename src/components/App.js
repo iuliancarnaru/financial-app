@@ -2,7 +2,7 @@ import React, { useContext, useReducer } from "react";
 import AppContext from "./context";
 import AppReducer from "./reducer";
 
-import { Router } from "@reach/router";
+import { Router, Link } from "@reach/router";
 
 import Dashboard from "./Dashboard";
 import Edit from "./Edit";
@@ -22,6 +22,11 @@ const App = () => {
 
           <NotFound default />
         </Router>
+
+        <nav className="navigation">
+          <Link to="/">Home</Link>
+          <Link to="edit">Edit</Link>
+        </nav>
       </div>
     </AppContext.Provider>
   );
