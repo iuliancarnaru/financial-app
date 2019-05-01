@@ -1,0 +1,19 @@
+.main-container {
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.status-bar,
+.navigation {
+  background-color: $app-color--light-grey;
+  padding: 1rem;
+}
+
+.navigation {
+  border-radius: 0.5rem;
+  margin: 0.5rem 1rem;
+}

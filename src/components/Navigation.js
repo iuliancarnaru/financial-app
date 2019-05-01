@@ -3,9 +3,11 @@ import { Link } from "@reach/router";
 
 const Navigation = () => {
   return (
-    <div>
-      <h1>Navigation</h1>
+    <div className="navigation flex-container">
       <Link to="/">HOME</Link>
+      <Link to="/">ADD</Link>
+      <Link to="/">TIMELINE</Link>
+      <Link to="/">MORE</Link>
     </div>
   );
 };

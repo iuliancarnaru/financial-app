@@ -18,17 +18,19 @@ const App = () => {
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
-      <StatusBar />
+      <div className="main-container">
+        <StatusBar />
 
-      <Suspense fallback={<Loading />}>
-        <Router>
-          <Dashboard path="/" />
-          <Edit path="/edit/:id" />
-          <NotFound default />
-        </Router>
-      </Suspense>
+        <Suspense fallback={<Loading />}>
+          <Router>
+            <Dashboard path="/" />
+            <Edit path="/edit/:id" />
+            <NotFound default />
+          </Router>
+        </Suspense>
 
-      <Navigation />
+        <Navigation />
+      </div>
     </AppContext.Provider>
   );
 };
