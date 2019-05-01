@@ -1,12 +1,15 @@
-import React, { useContext, useReducer } from "react";
+import React, { useContext, useReducer, Suspense } from "react";
+import { Router } from "@reach/router";
 import AppContext from "./context";
 import AppReducer from "./reducer";
 
-import { Router, Link } from "@reach/router";
+import StatusBar from "./StatusBar";
+import Navigation from "./Navigation";
 
-import Dashboard from "./Dashboard";
-import Edit from "./Edit";
-import NotFound from "./NotFound";
+const Dashboard = React.lazy(() => import("./Dashboard"));
+const NotFound = React.lazy(() => import("./NotFound"));
+
+const Loading = () => <h1>loading...</h1>;
 
 const App = () => {
   const initialState = useContext(AppContext);
@@ -14,20 +17,16 @@ const App = () => {
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
-      <div className="main-container">
+      <StatusBar />
+
+      <Suspense fallback={<Loading />}>
         <Router>
           <Dashboard path="/" />
-
-          <Edit path="/edit" />
-
           <NotFound default />
         </Router>
+      </Suspense>
 
-        <nav className="navigation">
-          <Link to="/">Home</Link>
-          <Link to="edit">Edit</Link>
-        </nav>
-      </div>
+      <Navigation />
     </AppContext.Provider>
   );
 };

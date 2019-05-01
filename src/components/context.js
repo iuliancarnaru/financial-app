@@ -1,10 +1,9 @@
 import React from "react";
 
 const AppContext = React.createContext({
-  info: [
+  appData: [
     {
-      month: "April",
-      total: 1500
+      tile: "Financial Freedom"
     }
   ]
 });
