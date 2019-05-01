@@ -20,15 +20,13 @@ const App = () => {
     <AppContext.Provider value={{ state, dispatch }}>
       <div className="main-container">
         <StatusBar />
-
         <Suspense fallback={<Loading />}>
           <Router>
             <Dashboard path="/" />
-            <Edit path="/edit/:id" />
+            <Edit path="/edit" />
             <NotFound default />
           </Router>
         </Suspense>
-
         <Navigation />
       </div>
     </AppContext.Provider>

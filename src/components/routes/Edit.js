@@ -7,7 +7,7 @@ const Edit = props => {
   return (
     <div>
       <h1>
-        {state.appData[0].title} with id {props.id}
+        Edit {state.appData[0].title} with id {props.id}
       </h1>
     </div>
   );

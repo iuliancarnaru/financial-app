@@ -9,11 +9,21 @@
 
 .status-bar,
 .navigation {
-  background-color: $app-color--light-grey;
   padding: 1rem;
+}
+
+.status-bar {
+  background-color: $app-color--medium-grey;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
 }
 
 .navigation {
   border-radius: 0.5rem;
   margin: 0.5rem 1rem;
+
+  & .icon-box:not(:last-child) {
+    border: 1px solid blue;
+  }
 }

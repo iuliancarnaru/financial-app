@@ -1,4 +1,21 @@
-.flex-container {
+.flex-container-between {
   display: flex;
   justify-content: space-between;
+}
+
+.flex-container-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-box {
+  width: 7rem;
+  text-align: center;
+  background-color: $app-color--medium-grey;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.icon {
+  font-size: 3rem;
 }
