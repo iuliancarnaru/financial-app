@@ -13,7 +13,7 @@
 }
 
 .status-bar {
-  background-color: $app-color--medium-grey;
+  background-color: #9c71f0;
   margin: 0.5rem;
   border-radius: 0.5rem;
   color: white;
@@ -22,10 +22,6 @@
 .navigation {
   border-radius: 0.5rem;
   margin: 0.5rem 1rem;
-
-  & .icon-box:not(:last-child) {
-    border: 1px solid blue;
-  }
 }
 
 .dashboard {
