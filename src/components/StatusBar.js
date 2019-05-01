@@ -21,8 +21,6 @@ const StatusBar = () => {
       .then(result => setWeatherData(result.data.main));
   }, []);
 
-  console.log(weatherData);
-
   const handleOnline = () => {
     setStatus(true);
   };
@@ -34,8 +32,10 @@ const StatusBar = () => {
   return (
     <div className="status-bar flex-container-between ">
       <div>{status ? "Online" : "Ofline"}</div>
-      <div>{date}</div>
-      <div>{temperature} &#176;C</div>
+      <div>
+        <strong>{date}</strong>
+      </div>
+      <div>{temperature ? temperature : `--`} &#176;C</div>
     </div>
   );
 };

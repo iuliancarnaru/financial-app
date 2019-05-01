@@ -27,3 +27,11 @@
     border: 1px solid blue;
   }
 }
+
+.dashboard {
+  background-color: $app-color--light-grey;
+  margin: 0.5rem;
+  max-height: 50rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+}
