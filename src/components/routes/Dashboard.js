@@ -1,5 +1,6 @@
 import React from "react";
 
+// move data to General context
 const Dashboard = () => {
   const dashboardInfo = [
     {
@@ -31,7 +32,17 @@ const Dashboard = () => {
           </div>
         ))}
       </div>
-      <div>Part 2</div>
+
+      <div className="dashboard-income-outcome">
+        <div className="income">
+          <p>3400</p>
+          <span>&nbsp;</span>
+        </div>
+        <div className="outcome">
+          <p>1770</p>
+          <span>52%</span>
+        </div>
+      </div>
       <div>Part 3</div>
     </div>
   );

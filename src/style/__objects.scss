@@ -19,3 +19,35 @@
 .icon {
   font-size: 3rem;
 }
+
+.dashboard-income-outcome {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-weight: 200;
+  color: white;
+  font-size: 4rem;
+
+  .income {
+    background-color: #8eea00;
+    flex: 1;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .outcome {
+    background-color: #ff4500;
+    flex: 1;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  span {
+    font-size: 1.2rem;
+    display: block;
+  }
+}
