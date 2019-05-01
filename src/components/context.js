@@ -3,7 +3,7 @@ import React from "react";
 const AppContext = React.createContext({
   appData: [
     {
-      tile: "Financial Freedom"
+      title: "Financial Freedom"
     }
   ]
 });

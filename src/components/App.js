@@ -7,6 +7,7 @@ import StatusBar from "./StatusBar";
 import Navigation from "./Navigation";
 
 const Dashboard = React.lazy(() => import("./Dashboard"));
+const Edit = React.lazy(() => import("./Edit"));
 const NotFound = React.lazy(() => import("./NotFound"));
 
 const Loading = () => <h1>loading...</h1>;
@@ -22,6 +23,7 @@ const App = () => {
       <Suspense fallback={<Loading />}>
         <Router>
           <Dashboard path="/" />
+          <Edit path="/edit/:id" />
           <NotFound default />
         </Router>
       </Suspense>
