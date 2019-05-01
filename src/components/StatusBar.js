@@ -1,12 +1,27 @@
 import React, { useState, useEffect } from "react";
+import moment from "moment";
+import axios from "axios";
 
 const StatusBar = () => {
   const [status, setStatus] = useState(navigator.onLine);
+  const date = moment().format("MMM Do YY");
+
+  const [weatherData, setWeatherData] = useState([]);
+
+  const temperature = Math.round(weatherData.temp - 273.15);
 
   useEffect(() => {
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
-  });
+
+    axios
+      .get(
+        `http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=814a0524d9ed038ee65ba121ef28c339`
+      )
+      .then(result => setWeatherData(result.data.main));
+  }, []);
+
+  console.log(weatherData);
 
   const handleOnline = () => {
     setStatus(true);
@@ -19,8 +34,8 @@ const StatusBar = () => {
   return (
     <div className="status-bar flex-container-between ">
       <div>{status ? "Online" : "Ofline"}</div>
-      <div>May 2019</div>
-      <div>15 - Cloudy</div>
+      <div>{date}</div>
+      <div>{temperature} &#176;C</div>
     </div>
   );
 };
