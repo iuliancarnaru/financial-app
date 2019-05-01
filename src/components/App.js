@@ -6,9 +6,9 @@ import AppReducer from "./reducer";
 import StatusBar from "./StatusBar";
 import Navigation from "./Navigation";
 
-const Dashboard = React.lazy(() => import("./Dashboard"));
-const Edit = React.lazy(() => import("./Edit"));
-const NotFound = React.lazy(() => import("./NotFound"));
+const Dashboard = React.lazy(() => import("./routes/Dashboard"));
+const Edit = React.lazy(() => import("./routes/Edit"));
+const NotFound = React.lazy(() => import("./routes/NotFound"));
 
 const Loading = () => <h1>loading...</h1>;
 
