@@ -29,9 +29,54 @@
 }
 
 .dashboard {
-  background-color: $app-color--light-grey;
   margin: 0.5rem;
-  max-height: 50rem;
+  height: 50rem;
   border-radius: 0.5rem;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-general {
+    display: flex;
+    justify-content: space-between;
+
+    &--card {
+      flex: 1;
+      margin-top: 0.5rem;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .price-container {
+    background-color: $app-color--light-grey;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.25rem;
+      border-radius: 50%;
+    }
+  }
+
+  .danger {
+    background-color: $color-danger;
+  }
+
+  .neutral {
+    background-color: $color-neutral;
+  }
+
+  .success {
+    background-color: $color-success;
+  }
 }
